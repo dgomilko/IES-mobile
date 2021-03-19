@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Factorise</string>
+    <string name="btn_text">Factorise</string>
+    <string name="hint">Enter your number</string>
+</resources>

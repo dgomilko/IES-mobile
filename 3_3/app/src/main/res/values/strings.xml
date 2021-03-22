@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GeneticAlgorithm</string>
+    <string name="x1">* x1 +</string>
+    <string name="x2">* x2 +</string>
+    <string name="x3">* x3 +</string>
+    <string name="plus">+</string>
+    <string name="x4">* x4 =</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="c">c</string>
+    <string name="d">d</string>
+    <string name="res">result</string>
+    <string name="btn">run algorithm</string>
+</resources>

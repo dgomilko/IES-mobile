@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_500"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/a"
+            style="@style/inputStyle"
+            android:hint="@string/a"
+            android:importantForAutofill="no"/>
+
+        <TextView
+            style="@style/textStyle"
+            android:text="@string/x1" />
+
+        <EditText
+            android:id="@+id/b"
+            style="@style/inputStyle"
+            android:hint="@string/b"
+            android:importantForAutofill="no"/>
+
+        <TextView
+            style="@style/textStyle"
+            android:text="@string/x2" />
+
+        <EditText
+            android:id="@+id/c"
+            style="@style/inputStyle"
+            android:hint="@string/c"
+            android:importantForAutofill="no"/>
+
+        <TextView
+            style="@style/textStyle"
+            android:text="@string/x3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textStyle"
+            android:layout_width="25dp"
+            android:text="@string/plus" />
+
+        <EditText
+            android:id="@+id/d"
+            style="@style/inputStyle"
+            android:hint="@string/d"
+            android:importantForAutofill="no"/>
+
+        <TextView
+            style="@style/textStyle"
+            android:text="@string/x4" />
+
+        <EditText
+            android:id="@+id/res"
+            style="@style/inputStyle"
+            android:layout_width="83dp"
+            android:textSize="30sp"
+            android:hint="@string/res"
+            android:importantForAutofill="no"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:text="@string/btn"
+        android:textSize="22sp"
+        android:background="@drawable/btn_style" />
+
+    <TextView
+        android:id="@+id/resultArea"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:textColor="@color/yellow"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:textSize="32sp"/>
+</LinearLayout>

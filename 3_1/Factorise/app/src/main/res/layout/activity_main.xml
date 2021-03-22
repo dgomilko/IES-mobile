@@ -44,4 +44,15 @@
         android:textColor="@color/yellow"
         android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_marginTop="70dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"/>
+
 </LinearLayout>

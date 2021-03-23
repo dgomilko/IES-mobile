@@ -15,7 +15,7 @@ class WeightedRandom(elements: List<Equation>) {
     }
 
     fun getRand(): Equation {
-        val value: Double = random.nextDouble() * total
+        val value = random.nextDouble() * total
         return map.higherEntry(value)!!.value
     }
 }

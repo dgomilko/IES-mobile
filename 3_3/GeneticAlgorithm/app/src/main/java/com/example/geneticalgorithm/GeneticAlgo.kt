@@ -4,9 +4,10 @@ import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.floor
 
-class GeneticAlgo(private val coeffs: List<Double>, private val finalResult: Double) {
+class GeneticAlgo(private val populationSize: Int,
+                  private val coeffs: List<Double>,
+                  private val finalResult: Double) {
     private val variables = coeffs.size
-    private val populationSize = 10
     private var population = mutableListOf<Equation>()
 
     private fun substitute(eq: Equation): Double {

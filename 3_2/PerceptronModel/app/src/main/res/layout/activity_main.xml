@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_500"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/textStyle"
+        android:text="@string/points" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            style="@style/textStyle"
+            android:layout_marginLeft="15dp"
+            android:text="@string/msg"
+            android:layout_marginStart="10dp" />
+
+        <Spinner
+            android:id="@+id/spinnerLearningRate"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/learning_rates"
+            android:prompt="@string/learning_prompt"
+            android:layout_marginStart="15dp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <RadioButton android:id="@+id/radioTime"
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                style="@style/textStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/msg2"
+                android:onClick="onRadioButtonClicked"/>
+
+            <Spinner
+                android:id="@+id/spinnerTimeDeadline"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/time_deadlines"
+                android:prompt="@string/time_prompt"
+                android:layout_marginStart="15dp" />
+
+            <RadioButton android:id="@+id/radioIterations"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/msg3"
+                android:onClick="onRadioButtonClicked"/>
+
+            <Spinner
+                android:id="@+id/spinnerIterDeadline"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:entries="@array/iteration_deadlines"
+                android:prompt="@string/iterations_prompt"
+                android:layout_marginStart="15dp" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:text="@string/btn"
+        android:textSize="22sp"
+        android:background="@drawable/btn_style" />
+
+    <TextView
+        android:id="@+id/resultArea"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:textColor="@color/yellow"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:textSize="28sp"/>
+</LinearLayout>

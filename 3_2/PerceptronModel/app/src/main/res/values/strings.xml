@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ModelPerceptron</string>
+    <string name="points">А(0,6), В(1,5), С(3,3), D(2,4)</string>
+    <string name="msg">Train at a learning rate:</string>
+    <string name="msg2">with a time deadline:</string>
+    <string name="msg3">or iterations deadline:</string>
+    <string name="btn">Start training</string>
+
+    <string name="learning_prompt">Learning rate</string>
+    <string-array name="learning_rates">
+        <item>0.001</item>
+        <item>0.01</item>
+        <item>0.05</item>
+        <item>0.1</item>
+        <item>0.2</item>
+        <item>0.3</item>
+    </string-array>
+
+    <string name="time_prompt">Time deadline</string>
+    <string-array name="time_deadlines">
+        <item>0.5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="iterations_prompt">Iterations deadline</string>
+    <string-array name="iteration_deadlines">
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+</resources>
+

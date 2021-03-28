@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             val args = inputs.map { input -> input.text.toString().toDouble() }.toMutableList()
             val expected = args.removeLast()
             val startTime = SystemClock.elapsedRealtime()
-            val res = GeneticAlgo(args, expected).runAlgorithm()
+            val res = GeneticAlgo(10, args, expected).runAlgorithm()
             val endTime = SystemClock.elapsedRealtime()
             val elapsedMilliSeconds = endTime - startTime
             val elapsedSeconds = elapsedMilliSeconds / 1000.0

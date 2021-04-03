@@ -5,6 +5,7 @@ import android.os.SystemClock
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -34,8 +35,13 @@ class MainActivity : AppCompatActivity() {
             val endTime = SystemClock.elapsedRealtime()
             val elapsedMilliSeconds = endTime - startTime
             val elapsedSeconds = elapsedMilliSeconds / 1000.0
-            output = "Result:\nX1 = ${res[0]},\nX2 = ${res[1]},\nX3 = ${res[2]},\nX4 = ${res[3]}\n\n" +
-                    "(calculated in $elapsedSeconds seconds)"
+            if (res != null)
+                output = "Result:\nX1 = ${res[0]},\nX2 = ${res[1]},\nX3 = ${res[2]},\nX4 = ${res[3]}\n\n" +
+                        "(calculated in $elapsedSeconds seconds)"
+            else
+                Toast
+                        .makeText(applicationContext,"Deadline missed", Toast.LENGTH_SHORT)
+                        .show()
         }
         else output = "Invalid input (some of the fields are empty)"
         result.text = output

@@ -1,5 +1,6 @@
 package com.example.geneticalgorithm
 
+import android.os.SystemClock
 import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.floor
@@ -57,13 +58,18 @@ class GeneticAlgo(private val populationSize: Int,
         population = newGeneration
     }
 
-    fun runAlgorithm(): List<Double> {
+    fun runAlgorithm(): List<Double>? {
+        val deadlineMs = 3000L
+        val startTime = SystemClock.elapsedRealtime()
+        var elapsedTime = 0L
         initPopulation()
 
-        while(true) {
+        while(elapsedTime < deadlineMs) {
             val result = fitness()
             if (result != null) return result.coeffs
             crossbreeding()
+            elapsedTime = SystemClock.elapsedRealtime() - startTime
         }
+        return null
     }
 }

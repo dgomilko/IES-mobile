@@ -47,7 +47,6 @@ class Perceptron(
         weights.mapIndexed { i, _ -> weights[i] = 0.0 }
         var curCount = 0L
         val startTime = SystemClock.elapsedRealtime()
-        println("$timeDeadline, $iterationsDeadline")
         while(checkDeadline(curCount)) {
             points.map { point ->
                 if (checkFitness()) return Pair(weights, true)
